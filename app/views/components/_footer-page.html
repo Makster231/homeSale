@@ -1,0 +1,62 @@
+
+<!--    Jquery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--    Jquery Validate-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
+<!--    Lazy-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.10/jquery.lazy.min.js"></script>
+<!--    Fancybox-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<!--    Plyr Player-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.4/plyr.min.js"></script>
+<!--    Main JS-->
+<script src="{{var_path_env}}js/custom.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        function ThisIsWebP() {
+            var def = $.Deferred(), crimg = new Image();
+            crimg.onload = function () {
+                def.resolve();
+            };
+            crimg.onerror = function () {
+                def.reject();
+            };
+            crimg.src = "./images/webp.webp";
+            return def.promise();
+        }
+
+        ThisIsWebP().then(function () {
+
+            if($(window).innerWidth() < 640){
+                $('body').css({
+                    'background': 'url(./images/main_bg-m.webp) fixed no-repeat'
+                });
+            }else{
+                $('body').css({
+                    'background': 'url(./images/main_bg.webp) fixed no-repeat'
+                });
+            }
+
+        }, function () {
+
+            if($(window).innerWidth() < 640){
+                $('body').css({
+                    'background': 'url(./images/main_bg-m.jpg) fixed no-repeat'
+                });
+            }else{
+                $('body').css({
+                    'background': 'url(./images/main_bg.jpg) fixed no-repeat'
+                });
+            }
+
+        });
+    });
+</script>
+
+</body>
+</html>
+

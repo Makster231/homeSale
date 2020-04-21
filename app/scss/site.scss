@@ -1,0 +1,20 @@
+﻿//Bootstrap:
+@import "../../node_modules/bootstrap-scss/bootstrap-reboot.scss";
+/* purgecss start ignore */
+//Components:
+@import "components/reset/reset";
+@import "components/fontello/fontello";
+@import "components/fontello/fontello-codes";
+@import "components/player/player";
+@import "components/grid/grid-classes";
+@import "components/body/wapper";
+@import "components/body/body";
+@import "components/header/header_nav-page";
+@import "components/index-page/main_content-page";
+@import "components/gallery-page/gallery";
+@import "components/contact-page/form";
+@import "components/thankyou-page/thankyou_content";
+@import "components/popup/popup-info";
+
+
+/* purgecss end ignore */

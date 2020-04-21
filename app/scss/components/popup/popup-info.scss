@@ -1,0 +1,120 @@
+﻿#popup_info-house,
+#popup_info-area {
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+  display: none;
+
+  @media screen and (max-width: 1168px) {
+    max-width: 70%;
+  }
+  @media screen and (max-width: 960px) {
+    max-width: 95%;
+  }
+  @media screen and (max-width: 640px) {
+    max-width: 100%;
+  }
+
+  &.fancybox-content {
+    @media screen and (max-width: 640px) {
+      padding: 30px 20px 0 !important;
+    }
+  }
+
+
+  .popup_info-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+
+    @media screen and (max-width: 640px) {
+      flex-direction: column;
+    }
+
+
+    a {
+      display: block;
+      max-width: 49%;
+
+      @media screen and (max-width: 640px) {
+        margin-bottom: 15px;
+        max-width: 100%;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+
+  h4 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 0 auto 25px;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.02rem;
+
+
+    @media screen and (max-width: 640px) {
+      margin: 0 auto 20px;
+    }
+
+    @media screen and (max-width: 370px) {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02rem;
+    max-width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+
+    @media screen and (max-width: 640px) {
+      font-size: 17px;
+    }
+
+
+    @media screen and (max-width: 400px) {
+      font-size: 16px;
+    }
+
+
+    @media screen and (max-width: 370px) {
+      font-size: 15px;
+    }
+
+    &::before {
+      content: '•';
+      font-size: 18px;
+      line-height: 22px;
+      position: absolute;
+      left: -15px;
+    }
+
+    u {
+      font-weight: bold;
+    }
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+  .fancybox-slide--html {
+    padding: 0 !important;
+  }
+}

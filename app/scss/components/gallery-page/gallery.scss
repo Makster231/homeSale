@@ -1,0 +1,321 @@
+﻿.gallery_main {
+  padding: 20px 15px 0;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #fff;
+
+  @media screen and (max-width: 640px) {
+    margin-bottom: 15px;
+  }
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+}
+
+
+.gallery_main-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 74%;
+  @media screen and (max-width: 640px) {
+    max-width: 100%;
+  }
+
+  .gallery_description {
+    h3 {
+      font-size: 24px;
+      line-height: 1.2;
+      margin: 0 auto 25px;
+      width: 100%;
+      text-align: center;
+      color: #000;
+      font-weight: 600;
+      display: block;
+
+
+      @media screen and (max-width: 960px) {
+        font-size: 22px;
+        margin: 0 auto 22px;
+      }
+      @media screen and (max-width: 640px) {
+        font-size: 20px;
+        margin: 0 auto 18px;
+      }
+      @media screen and (max-width: 370px) {
+        margin: 0 auto 15px;
+      }
+    }
+
+    .gallery_video{
+      width: 100%;
+      display: block;
+      margin: 0 auto 25px;
+      text-align: center;
+      @media screen and (max-width: 960px) {
+        margin: 0 auto 22px;
+      }
+      @media screen and (max-width: 640px) {
+        margin: 0 auto 18px;
+      }
+      @media screen and (max-width: 370px) {
+        margin: 0 auto 15px;
+      }
+
+
+
+      video{
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+
+  .gallery_contacts {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 960px) {
+      flex-direction: column;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1;
+      margin: 0;
+      width: 100%;
+      max-width: 60%;
+      min-width: 52%;
+      text-align: left;
+      color: #000;
+      display: block;
+      font-weight: bold;
+
+      @media screen and (max-width: 1168px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 960px) {
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto 15px;
+      }
+      @media screen and (max-width: 640px) {
+        max-width: 100%;
+      }
+
+      @media screen and (max-width: 370px) {
+        font-size: 15px;
+      }
+    }
+
+    .gallery_contacts-links {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      a {
+        max-width: 275px;
+        width: 100%;
+        color: #fff;
+        font-size: 15px;
+        line-height: 1;
+        font-weight: bold;
+        margin: 0 0 25px;
+        letter-spacing: 0.05rem;
+        padding: 10px 0;
+        border: 0;
+        text-align: center;
+        outline: 0;
+        transition: 400ms ease;
+        cursor: pointer;
+        display: block;
+        background: #f60000;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25), inset 0px -4px 8px rgba(0, 0, 0, 0.25), inset 0px 3px 8px rgba(0, 0, 0, 0.16);
+        border-radius: 2px;
+
+        &:hover {
+          background-color: #c00000;
+          box-shadow: none;
+        }
+
+        &:focus {
+          outline: 0;
+        }
+
+
+        &:last-of-type {
+          margin: 0;
+        }
+
+        @media screen and (max-width: 1168px) {
+          max-width: 100%;
+          font-size: 16px;
+        }
+
+        @media screen and (max-width: 1168px) and (max-height: 768px) {
+          font-size: 16px;
+        }
+
+
+        @media screen and (max-width: 960px) {
+          max-width: 55%;
+          font-size: 15px;
+          margin: 0 auto 20px;
+          &:last-of-type {
+            margin: 0 auto;
+          }
+        }
+
+        @media screen and (max-width: 640px) {
+          max-width: 100%;
+          font-size: 15px;
+          margin: 0 auto 15px;
+          &:last-of-type {
+            margin: 0 auto;
+          }
+        }
+
+        @media screen and (max-width: 370px) {
+          font-size: 14px;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+.gallery_main_images {
+  max-width: 24%;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 640px) {
+    max-width: 100%;
+  }
+
+
+  &.images-row {
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+
+    a {
+      max-width: 48.75%;
+
+      @media screen and (max-width: 960px) {
+        max-width: 48.75%;
+      }
+      @media screen and (max-width: 640px) {
+        max-width: 100%;
+      }
+    }
+
+  }
+
+  &.images-column {
+    flex-direction: column;
+    min-width: 24%;
+    width: 100%;
+
+    a {
+      display: block;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    picture {
+      display: block;
+      margin-bottom: 0;
+      max-width: 100%;
+      max-height: 425px;
+      text-align: right;
+    }
+
+    img {
+      max-width: 100%;
+      object-fit: fill;
+      height: 411px;
+      width: 300px;
+    }
+
+    @media screen and (max-width: 1168px) {
+
+      a {
+        margin-bottom: 6.55%;
+      }
+
+      img {
+        height: 350px;
+      }
+    }
+    @media screen and (max-width: 960px) {
+
+      a {
+        margin-bottom: 9%;
+      }
+
+      img {
+        object-fit: cover;
+        height: 270px;
+      }
+    }
+    @media screen and (max-width: 640px) {
+
+      a {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 15px;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 640px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  picture {
+    display: block;
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+
+
+.gallery-page {
+  .header_top {
+    height: auto;
+    padding: 20px 0;
+    top: 0;
+    @media screen and (max-width: 640px) {
+      padding: 15px 0;
+    }
+  }
+}

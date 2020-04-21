@@ -1,0 +1,105 @@
+﻿.thankyou_section {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  @media screen and (max-width: 640px) {
+    height: 89%;
+  }
+
+  // Titles
+  .thankyou_block-text {
+    .thankyou_section-title {
+      font-size: 44px;
+      line-height: 1.2;
+      margin: 0 auto 25px;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      display: block;
+
+      @media screen and (max-height: 768px) {
+        font-size: 40px;
+        line-height: 1.1;
+        margin: 0 auto 20px;
+      }
+
+      @media screen and (max-width: 1168px) {
+        font-size: 36px;
+      }
+
+      @media screen and (max-width: 1168px) and (max-height: 768px) {
+        font-size: 34px;
+        margin: 0 auto 15px;
+      }
+      @media screen and (max-width: 640px) {
+        font-size: 28px;
+        margin: 0 auto 12px;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 26px;
+      }
+      @media screen and (max-width: 370px) {
+        font-size: 22px;
+        margin: 0 auto 10px;
+      }
+
+      @media not all and (min-resolution: .001dpcm) {
+        @supports (-webkit-appearance:none) {
+          @media screen and (max-width: 640px) {
+            font-size: 22px;
+            margin: 0 auto 15px;
+          }
+        }
+      }
+    }
+
+    .thankyou_section-subTitle {
+      font-size: 28px;
+      line-height: 1.2;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 75%;
+      text-align: center;
+      color: #fff;
+      display: block;
+      @media screen and (max-height: 768px) {
+        font-size: 24px;
+        line-height: 1.1;
+      }
+
+      @media screen and (max-width: 1168px) {
+        font-size: 22px;
+      }
+
+      @media screen and (max-width: 1168px) and (max-height: 768px) {
+        font-size: 20px;
+      }
+
+      @media screen and (max-width: 640px) {
+        font-size: 17px;
+      }
+
+      @media screen and (max-width: 400px) {
+        font-size: 15px;
+      }
+
+      @media screen and (max-width: 370px) {
+        font-size: 14px;
+        letter-spacing: 0.04rem;
+      }
+
+      @media not all and (min-resolution: .001dpcm) {
+        @supports (-webkit-appearance:none) {
+
+          @media screen and (max-width: 640px) {
+            font-size: 15px;
+            margin: 0 auto 25px;
+          }
+
+        }
+      }
+    }
+  }
+}
