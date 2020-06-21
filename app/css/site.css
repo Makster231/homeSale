@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! Bootstrap Reboot v4.3.1 (https://getbootstrap.com/) Copyright 2011-2019 The Bootstrap Authors Copyright 2011-2019 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md) */
+/*! Bootstrap Reboot v4.5.0 (https://getbootstrap.com/) Copyright 2011-2020 The Bootstrap Authors Copyright 2011-2020 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md) */
 *, *::before, *::after { box-sizing: border-box; }
 
 html { font-family: sans-serif; line-height: 1.15; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -8,7 +8,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 1rem; font-weight: 400; line-height: 1.5; color: #212529; text-align: left; background-color: #fff; }
 
-[tabindex="-1"]:focus { outline: 0 !important; }
+[tabindex="-1"]:focus:not(:focus-visible) { outline: 0 !important; }
 
 hr { box-sizing: content-box; height: 0; overflow: visible; }
 
@@ -44,15 +44,13 @@ a { color: #007bff; text-decoration: none; background-color: transparent; }
 
 a:hover { color: #0056b3; text-decoration: underline; }
 
-a:not([href]):not([tabindex]) { color: inherit; text-decoration: none; }
+a:not([href]) { color: inherit; text-decoration: none; }
 
-a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus { color: inherit; text-decoration: none; }
-
-a:not([href]):not([tabindex]):focus { outline: 0; }
+a:not([href]):hover { color: inherit; text-decoration: none; }
 
 pre, code, kbd, samp { font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 1em; }
 
-pre { margin-top: 0; margin-bottom: 1rem; overflow: auto; }
+pre { margin-top: 0; margin-bottom: 1rem; overflow: auto; -ms-overflow-style: scrollbar; }
 
 figure { margin: 0 0 1rem; }
 
@@ -78,6 +76,8 @@ button, input { overflow: visible; }
 
 button, select { text-transform: none; }
 
+[role="button"] { cursor: pointer; }
+
 select { word-wrap: normal; }
 
 button, [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; }
@@ -87,8 +87,6 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disab
 button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { padding: 0; border-style: none; }
 
 input[type="radio"], input[type="checkbox"] { box-sizing: border-box; padding: 0; }
-
-input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"] { -webkit-appearance: listbox; }
 
 textarea { overflow: auto; resize: vertical; }
 
@@ -893,13 +891,27 @@ button.plyr__control--overlaid:hover { background-color: rgba(68, 100, 191, 0.8)
 
 .wrapper-page .main-page { display: flex; align-items: center; flex: 1 0 auto; }
 
-body { position: relative; font-family: 'Open Sans', sans-serif !important; background-size: cover !important; }
+body { position: relative; font-family: "Open Sans", sans-serif !important; background-size: cover !important; }
 
 body::-webkit-scrollbar { width: 16px; }
 
 body::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
 
 body::-webkit-scrollbar-thumb { -webkit-border-radius: 10px; border-radius: 10px; -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); background-color: rgba(0, 0, 0, 0.042); }
+
+body .privacy-page { background-color: rgba(0, 0, 0, 0.85); padding: 30px 20px; }
+
+body .privacy-page h1 { font-size: 36px; text-align: center; width: 100%; display: block; margin-bottom: 20px; color: #fff; }
+
+@media (max-width: 960px) { body .privacy-page h1 { font-size: 24px; } }
+
+@media (max-width: 640px) { body .privacy-page h1 { font-size: 18px; } }
+
+body .privacy-page p { display: block; color: #fff; margin-bottom: 10px; line-height: 1.4; letter-spacing: 0.03rem; }
+
+@media (max-width: 960px) { body .privacy-page p { font-size: 14px; } }
+
+body .privacy-page a { color: blue; }
 
 .header_top { position: relative; top: 0; display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 25px 0; }
 
@@ -1251,16 +1263,20 @@ body::-webkit-scrollbar-thumb { -webkit-border-radius: 10px; border-radius: 10px
 
 @media screen and (max-width: 370px) { .contact-page .contact_form .form-group label { font-size: 15px; margin: 0 auto 4px; } }
 
-.contact-page .contact_form .form-group textarea, .contact-page .contact_form .form-group input { font-size: 16px; line-height: 1.1; padding: 12px 0 12px 15px; border-radius: 5px; outline: 0; color: #000; transition: 400ms ease; display: block; width: 100%; max-width: 400px; box-shadow: inset 0 0 2px 2px transparent; border: 1px solid transparent; }
+.contact-page .contact_form .form-group textarea, .contact-page .contact_form .form-group input { font-size: 15px; line-height: 1.1; padding: 10px 0 10px 12px; border-radius: 5px; outline: 0; color: #000; transition: 400ms ease; display: block; width: 100%; max-width: 400px; box-shadow: inset 0 0 2px 2px transparent; border: 1px solid transparent; }
 
 .contact-page .contact_form .form-group textarea:hover, .contact-page .contact_form .form-group textarea:focus, .contact-page .contact_form .form-group input:hover, .contact-page .contact_form .form-group input:focus { outline: 0; }
-
-@media screen and (max-height: 768px) { .contact-page .contact_form .form-group textarea, .contact-page .contact_form .form-group input { padding: 10px 0 10px 15px; } }
 
 @media screen and (max-width: 640px) { .contact-page .contact_form .form-group textarea, .contact-page .contact_form .form-group input { font-size: 15px; text-align: center; padding: 10px; }
   .contact-page .contact_form .form-group textarea::placeholder, .contact-page .contact_form .form-group input::placeholder { text-align: center; } }
 
 @media screen and (max-width: 370px) { .contact-page .contact_form .form-group textarea, .contact-page .contact_form .form-group input { font-size: 13px; padding: 8px; } }
+
+.contact-page .contact_form .form-group:last-of-type { display: flex; flex-direction: row-reverse; }
+
+.contact-page .contact_form .form-group:last-of-type label { width: 100%; }
+
+.contact-page .contact_form .form-group:last-of-type input { width: 25px; }
 
 .contact-page .contact_form button { display: block; max-width: 250px; width: 100%; margin: 0 auto; color: #fff; font-size: 20px; line-height: 1.2; font-weight: bold; letter-spacing: 0.05rem; padding: 12px 0; border: 0; text-align: center; outline: 0; transition: 300ms ease; cursor: pointer; background: #f60000; box-shadow: 0 0 5px rgba(0, 0, 0, 0.25), inset 0px -4px 8px rgba(0, 0, 0, 0.25), inset 0px 3px 8px rgba(0, 0, 0, 0.16); border-radius: 2px; }
 

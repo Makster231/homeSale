@@ -14,7 +14,6 @@
     padding: 0;
   }
 
-
   .go_back-link {
     color: #fff;
   }
@@ -67,7 +66,7 @@
     border-radius: 10px;
     border: 2px solid black;
     text-align: center;
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgba(0, 0, 0, 0.25);
 
     @media screen and (max-height: 768px) {
       padding: 20px 0;
@@ -86,7 +85,6 @@
       max-width: calc(100% - 20px);
       padding: 25px 0 15px;
     }
-
 
     .form-group {
       display: flex;
@@ -132,9 +130,9 @@
 
       textarea,
       input {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.1;
-        padding: 12px 0 12px 15px;
+        padding: 10px 0 10px 12px;
         border-radius: 5px;
         outline: 0;
         color: #000;
@@ -149,11 +147,6 @@
         &:focus {
           outline: 0;
         }
-
-        @media screen and (max-height: 768px) {
-          padding: 10px 0 10px 15px;
-        }
-
         @media screen and (max-width: 640px) {
           font-size: 15px;
           text-align: center;
@@ -168,8 +161,20 @@
           padding: 8px;
         }
       }
-    }
 
+      &:last-of-type {
+        display: flex;
+        flex-direction: row-reverse;
+
+        label {
+          width: 100%;
+        }
+
+        input {
+          width: 25px;
+        }
+      }
+    }
 
     button {
       display: block;
@@ -188,7 +193,9 @@
       transition: 300ms ease;
       cursor: pointer;
       background: #f60000;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.25), inset 0px -4px 8px rgba(0, 0, 0, 0.25), inset 0px 3px 8px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.25),
+        inset 0px -4px 8px rgba(0, 0, 0, 0.25),
+        inset 0px 3px 8px rgba(0, 0, 0, 0.16);
       border-radius: 2px;
 
       &:hover {
